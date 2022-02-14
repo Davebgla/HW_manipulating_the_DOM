@@ -24,6 +24,10 @@ const createPlayerListItem = function (form) {
   player.textContent = form.player.value;
   playerListItem.appendChild(player);
 
+  const position = document.createElement("p");
+  position.textContent = form.position.value;
+  playerListItem.appendChild(position);
+
   const team = document.createElement("h3");
   team.textContent = form.team.value;
   playerListItem.appendChild(team);

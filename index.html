@@ -2,38 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>NBA Player App</title>
+    <title>NBA Fantasy Team App</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="js/app.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <form id="new-player-form">
-      <div id="form-wrapper">
-        <div class="form-item">
-          <label for="player" class="primary">Player</label>
-          <input type="text" id="player" required />
-        </div>
-        <div class="form-item">
-          <label for="team" class="primary">Team</label>
-          <input type="text" id="team" required />
-        </div>
+    <div class="form_master">
+      <form id="new-player-form">
+        <div id="form-wrapper">
+          <div class="form-item">
+            <label for="player" class="primary">Player</label>
+            <input type="text" id="player" required />
+          </div>
+          <div class="form-item">
+            <label for="position" class="primary">Position</label>
+            <select id="position">
+              <option value="" disabled selected></option>
+              <option value="Point Guard">Point Guard</option>
+              <option value="Shooting Guard">Shooting Guard</option>
+              <option value="Small Forward">Small Forward</option>
+              <option value="Power Forward">Power Forward</option>
+              <option value="Center">Center</option>
+            </select>
+          </div>
 
-        <div class="form-item">
-          <label for="conference" class="primary">Conference</label>
-          <select id="conference">
-            <option value="" disabled selected></option>
-            <option value="Eastern Conference">Eastern Conference</option>
-            <option value="Western Conference">Western Conference</option>
-          </select>
-        </div>
-      </div>
-      <input type="submit" value="Save Player" />
-    </form>
+          <div class="form-item">
+            <label for="team" class="primary">Team</label>
+            <input type="text" id="team" required />
+          </div>
 
-    <button id="delete-all">Delete Players</button>
-    <h1>NBA Player List</h1>
+          <div class="form-item">
+            <label for="conference" class="primary">Conference</label>
+            <select id="conference">
+              <option value="" disabled selected></option>
+              <option value="Eastern Conference">Eastern Conference</option>
+              <option value="Western Conference">Western Conference</option>
+            </select>
+          </div>
+        </div>
+        <input type="submit" value="Save Player" />
+        <div class="btn">
+          <button id="delete-all">Delete Players</button>
+        </div>
+      </form>
+    </div>
+    <!-- <div class="btn">
+      <button id="delete-all">Delete Players</button>
+    </div> -->
+    <h1>NBA Fantasy Team</h1>
     <ul id="player-list"></ul>
   </body>
 </html>
